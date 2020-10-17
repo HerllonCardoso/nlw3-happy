@@ -28,8 +28,8 @@ interface OrphanageParams {
 }
 
 export default function Orphanage() {
-  const params = useParams<OrphanageParams>();
   const [orphanage, setOrphanage] = useState<Orphanage>();
+  const params = useParams<OrphanageParams>();
 
   useEffect(() => {
     api.get(`orphanages/${params.id}`).then((response) => {
