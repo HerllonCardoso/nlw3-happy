@@ -13,7 +13,6 @@ export default function Routes() {
     <NavigationContainer>
       <Navigator screenOptions={{ headerShown: false }}>
         <Screen name="OrphanagesMap" component={OrphanagesMap} />
-
         <Screen name="OrphanageDetails" component={OrphanageDetails} />
       </Navigator>
     </NavigationContainer>
