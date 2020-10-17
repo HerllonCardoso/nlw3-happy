@@ -24,16 +24,16 @@ export default function CreateOrphanage() {
   const [images, setImages] = useState<File[]>([]);
   const [previewImages, setPreviewImages] = useState<string[]>([]);
 
-  function handleMapClick(event: LeafletMouseEvent) {
+  const handleMapClick = (event: LeafletMouseEvent) => {
     const { lat, lng } = event.latlng;
 
     setPosition({
       latitude: lat,
       longitude: lng,
     });
-  }
+  };
 
-  function handleSelectImages(event: ChangeEvent<HTMLInputElement>) {
+  const handleSelectImages = (event: ChangeEvent<HTMLInputElement>) => {
     if (!event.target.files) {
       return;
     }
@@ -47,7 +47,7 @@ export default function CreateOrphanage() {
     });
 
     setPreviewImages(selectedImagesPreview);
-  }
+  };
 
   async function handleSubmit(event: FormEvent) {
     event.preventDefault();
@@ -68,22 +68,13 @@ export default function CreateOrphanage() {
       data.append("images", image);
     });
 
-    await api.post("orphanages", data);
+    console.log(latitude, longitude);
 
-    alert("Cadastro realizado com sucesso");
+    await api.post("/orphanages", data);
 
-    history.push("./app");
+    alert("Cadastro realizado com sucesso!");
 
-    console.log(
-      name,
-      about,
-      latitude,
-      longitude,
-      instructions,
-      opening_hours,
-      open_on_weekends,
-      images
-    );
+    history.push("/app");
   }
 
   return (
@@ -95,13 +86,14 @@ export default function CreateOrphanage() {
             <legend>Dados</legend>
 
             <Map
-              center={[-27.2092052, -49.6401092]}
+              center={[-22.51858286390888, -43.19154739379883]}
               style={{ width: "100%", height: 280 }}
               zoom={15}
               onClick={handleMapClick}
             >
               <TileLayer
-                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                url={"https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"}
+                // url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
               />
 
               {position.latitude !== 0 && (
