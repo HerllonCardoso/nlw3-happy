@@ -46,10 +46,10 @@ function OrphanagesMap() {
         zoom={11.75}
         style={{ width: "100%", height: "100%" }}
       >
-        {/*   <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" /> */}
-        <TileLayer
+        <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        {/* <TileLayer
           url={`https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
-        />
+        /> */}
 
         {orphanages.map((orphanage) => {
           return (
