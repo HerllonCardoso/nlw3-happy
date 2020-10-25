@@ -51,7 +51,7 @@ Ferramentas utilizadas nesse projeto.
 ## 💻 Sobre
 
 Na terceira edição da Next Level Week realizada pela Rocketseat, desenvolvemos a aplicação H<b>app</b>y, que tem como objetivo conectar
-pessoas à casas de acolhimento instucional, comemorando assim, o dia das crianças.
+pessoas à casas de acolhimento institucional, comemorando assim, o dia das crianças.
 
 
 ## 🔖 Layout
