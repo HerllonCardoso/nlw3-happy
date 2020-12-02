@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img alt="Happy" src=".github/happy.png" width="100%">
+  <img alt="Happy" src="https://i.imgur.com/tL9F6Vm.png" width="100%">
 </p>
 
 
