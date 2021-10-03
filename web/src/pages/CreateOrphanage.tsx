@@ -2,7 +2,7 @@ import React, { ChangeEvent, FormEvent, useState } from "react";
 import { Map, Marker, TileLayer } from "react-leaflet";
 
 import { LeafletMouseEvent } from "leaflet";
-
+// eslint-disable-next-line
 import { FiPlus } from "react-icons/fi";
 
 import "../styles/pages/create-orphanage.css";
@@ -22,6 +22,7 @@ export default function CreateOrphanage() {
   const [opening_hours, setOpeningHours] = useState("");
   const [open_on_weekends, setOpenOnWeekends] = useState(true);
   const [images, setImages] = useState<File[]>([]);
+  // eslint-disable-next-line
   const [previewImages, setPreviewImages] = useState<string[]>([]);
 
   const handleMapClick = (event: LeafletMouseEvent) => {
@@ -32,7 +33,7 @@ export default function CreateOrphanage() {
       longitude: lng,
     });
   };
-
+// eslint-disable-next-line
   const handleSelectImages = (event: ChangeEvent<HTMLInputElement>) => {
     if (!event.target.files) {
       return;
@@ -126,7 +127,7 @@ export default function CreateOrphanage() {
               />
             </div>
 
-            <div className="input-block">
+            {/* <div className="input-block">
               <label htmlFor="images">Fotos</label>
 
               <div className="images-container">
@@ -144,7 +145,7 @@ export default function CreateOrphanage() {
                 type="file"
                 id="image[]"
               />
-            </div>
+            </div> */}
           </fieldset>
 
           <fieldset>

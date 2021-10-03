@@ -30,6 +30,7 @@ interface OrphanageParams {
 export default function Orphanage() {
   const params = useParams<OrphanageParams>();
   const [orphanage, setOrphanage] = useState<Orphanage>();
+  //eslint-disable-next-line
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   useEffect(() => {
@@ -47,11 +48,11 @@ export default function Orphanage() {
 
       <main>
         <div className="orphanage-details">
-          <img
+          {/* <img
             src={orphanage.images[activeImageIndex].url}
             alt={orphanage.name}
-          />
-
+          /> */}
+{/* 
           <div className="images">
             {orphanage.images.map((image, index) => {
               return (
@@ -67,7 +68,7 @@ export default function Orphanage() {
                 </button>
               );
             })}
-          </div>
+          </div> */}
 
           <div className="orphanage-details-content">
             <h1>{orphanage.name}</h1>
